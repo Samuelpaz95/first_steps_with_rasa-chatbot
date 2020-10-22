@@ -32,3 +32,41 @@ nlu:
       - infor porfa
       - informacion por favor
       - donde puedo saber mas
+  - intent: request_dev_profile
+    examples: |
+      - Quiero saber sobre la vacante de [frontend](dev_area).
+      - Buenas, pregunto sobre la vacante.
+      - Buenas, pregunto sobre la vacante de [backend](dev_area).
+      - Me interesa el trabajo para [DevOps](dev_area)
+      - Aqui un [frontend](dev_area) developer
+      - Aqui un [backend](dev_area) developer
+      - Vengo por el anuncia de [data science](dev_area)
+  - intent: affirm
+    examples: |
+      - Si
+      - Claro
+      - La pregunta ofende
+      - Pues si
+      - Tengo
+  - intent: deny
+    examples: |
+      - No
+      - Para nada
+      - Ninguna
+      - Nop
+      - Pues no
+      - claro que no
+  - intent: inform
+    examples: |
+      - Mi nombre es [Willy Samuel Paz Colque](full_name)
+      - [Andrea Rodriguez Torrico](full_name)
+      - Es [Elias jose Ramirez](full_name)
+      - En [frontend](dev_area)
+      - [backend](dev_area)
+      - Soy [data scientist](dev_area)
+      - Me dedico al [frontend](dev_area) development
+      - Mi github es [https://github.com/RasaHQ](github)
+      - [https://github.com/Carlos](github)
+      - Es [https://github.com/mesa](github)
+      - [https://github.com/Carlos](github) ese es
+      - Este [https://github.com/tensorflow](github)

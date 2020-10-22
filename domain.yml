@@ -1,17 +1,93 @@
 intents:
 - chitchat
 - faq
+- request_dev_profile
+- affirm
+- deny
+- inform
+entities:
+- full_name
+- dev_area
+- github
+slots:
+  full_name:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  dev_area:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  github:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  with_exp:
+    type: text
+    auto_fill: false
+    influence_conversation: false
 responses:
   utter_chitchat/ask_name:
     - image: "https://i.imgur.com/zTvA58i.jpeg"
-      text: hola, mo nombre es chaman-bot
-    - text: hola, me llaman chaman-bot
+      text: "hola, mo nombre es chaman-bot"
+    - text: "hola, me llaman chaman-bot"
   utter_chitchat/ask_weather:
-    - text: está soleado por aquí.
+    - text: "está soleado por aquí."
       image: "https://i.imgur.com/vwv7aHN.png"
-    - text: Esta semana estuvo algo soleado, pero podría llover pronto.
+    - text: "Esta semana estuvo algo soleado, pero podría llover pronto."
   utter_faq/coment_publication:
-    - text: ¿quieres saber mas?
+    - text: "¿quieres saber mas?"
   utter_faq/ask_info:
-    - text: puedes encontar mas información al respecto aquí "el link", puedes contactarme al whatsapp 523432
-    - text: la info esta aqui "el link", por favor contactame por whatsapp 523432
+    - text: "puedes encontar mas información al respecto aquí [el link], puedes contactarme al whatsapp 523432"
+    - text: "la info esta aqui [el link], por favor contactame por whatsapp 523432"
+  utter_ask_full_name:
+    - text: "¿Cual es su nombre completo?"
+    - text: "Dígame su nombre completo porfavor."
+    - text: "Su nombre completo porfavor."
+  utter_ask_dev_area:
+    - text: "¿En que area de informatica se expecializa o enfoca mas?"
+    - text: "¿Cual es el area que mas domina de en informatica?"
+  utter_ask_github:
+    - text: "¿Podría mandarme el link de su Github?"
+    - text: "¿Podría mandarme el enlace de su Github?"
+    - text: "Páseme el link de su Github porfavor."
+    - text: "Déme el enlace de su Github porfavor."
+  utter_ask_with_exp:
+    - text: "¿Yá tiene experiencia trabajando en una empresa?"
+    - text: "¿Trabajó antes en una empresa?"
+  utter_submit:
+    - text: "Todo listo!"
+  utter_slots_values:
+    - text: "Gracias por comunicarte con nosotros señor {full_name}, 
+             veremos si tenemos vacante en el area de {dev_area}, 
+             revisaremos su perfil de github de elnace {github} que nos proporciono. 
+             Valoraremos su experiencia"
+actions:
+- '...'
+- utter_chitchat/ask_name
+- utter_chitchat/ask_weather
+- utter_faq/coment_publication
+- utter_faq/ask_info
+- utter_submit
+- utter_slots_values
+forms:
+  devprofile_form:
+    full_name:
+      - type: from_entity
+        entity: full_name
+    dev_area:
+      - type: from_entity
+        entity: dev_area
+    github:
+      - type: from_entity
+        entity: github
+    with_exp:
+      - type: from_intent
+        intent: affirm
+        value: true
+      - type: from_intent
+        intent: deny
+        value: false
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
