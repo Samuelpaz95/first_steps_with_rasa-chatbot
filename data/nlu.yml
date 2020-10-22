@@ -1,0 +1,34 @@
+version: "2.0"
+nlu:
+  - intent: chitchat/ask_name
+    examples: |
+      - ¿Cuale es tu nombre?
+      - ¿Puedo saber tu nombre?
+      - ¿Como te llaman?
+      - dime tu nombre porfa.
+  - intent: chitchat/ask_weather
+    examples: |
+      - ¿como está el tiempo por ahí?
+      - ¿parece soleado hoy?
+      - ¿te importaria comprobar el tiempo por mí?
+      - ¿como va el clima?
+      - ¿que tal está el clima?
+  - intent: faq/coment_publication
+    examples: |
+      - ví tu publicacion
+      - me topé con o que publicaste
+      - vi lo que publicaste
+      - me llegó tu publicacion
+      - me apareció tu publicacion
+  - intent: faq/ask_info
+    examples: |
+      - quisiera saber mas sobre tu publicación
+      - ¿me puedes decir mas?
+      - quisiera que me lo expliques
+      - ¿me puedes explicar?
+      - ¿me lo cuentas?
+      - info please
+      - info
+      - infor porfa
+      - informacion por favor
+      - donde puedo saber mas

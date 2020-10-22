@@ -1,0 +1,17 @@
+intents:
+- chitchat
+- faq
+responses:
+  utter_chitchat/ask_name:
+    - image: "https://i.imgur.com/zTvA58i.jpeg"
+      text: hola, mo nombre es chaman-bot
+    - text: hola, me llaman chaman-bot
+  utter_chitchat/ask_weather:
+    - text: está soleado por aquí.
+      image: "https://i.imgur.com/vwv7aHN.png"
+    - text: Esta semana estuvo algo soleado, pero podría llover pronto.
+  utter_faq/coment_publication:
+    - text: ¿quieres saber mas?
+  utter_faq/ask_info:
+    - text: puedes encontar mas información al respecto aquí "el link", puedes contactarme al whatsapp 523432
+    - text: la info esta aqui "el link", por favor contactame por whatsapp 523432

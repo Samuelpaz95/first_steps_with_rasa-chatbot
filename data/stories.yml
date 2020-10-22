@@ -1,0 +1,10 @@
+version: "2.0"
+stories:
+  - story: chitchat way
+    steps:
+      - intent: chitchat
+      - action: utter_chitchat
+  - story: faq way
+    steps:
+      - intent: faq
+      - action: utter_faq
