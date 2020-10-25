@@ -33,6 +33,8 @@ rasa shell
 ```
 ![shell_output](./.github/images/capture.png)
 
+try introducing "Quiero postular para la vacante de backend" o "Quiero postular para un puesto de trabajo" or a phrase asking to apply for a job.
+
 ## Next steps
 I will continue learning and adding more complex functionalities to this chatbot
 
